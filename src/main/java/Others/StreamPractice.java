@@ -18,8 +18,8 @@ public class StreamPractice {
         stream.forEach(System.out::println);
         // map: 물고기 상자에 담기
         // collect: 상자 운반 // 데이터의 변형 등의 처리를 하고 자료형으로 변환
-        
 
+        
 
     }
 }
