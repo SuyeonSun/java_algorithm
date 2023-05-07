@@ -58,6 +58,10 @@ public class ContainsPractice {
             int num = Integer.parseInt(t.substring(i, i + 3));
         }
 
+        // ===== 9. Integer.toString(num) =====
+        int number = 3;
+        String string = Integer.toString(number);
+
         // ===== 10. 배열의 최대, 최소 값 =====
         int[] arr2 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         Arrays.sort(arr2);
