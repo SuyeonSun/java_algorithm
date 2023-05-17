@@ -1,17 +1,16 @@
 package Algorithm;
 
-// 순열
-public class Permutation1 {
+// 중복 순열
+public class Permutation2 {
     public static void main (String[] args) {
         int[] arr = {1, 2};
-        boolean[] visited = new boolean[arr.length];
         int r = 2;
         int[] result = new int[r];
 
-        permutation(arr, visited, result, 0, r);
+        permutation(arr, result, 0, r);
     }
 
-    public static void permutation(int[] arr, boolean[] visited, int[] result, int depth, int r) {
+    public static void permutation(int[] arr, int[] result, int depth, int r) {
         if (depth == r) {
             for (int i = 0; i < r; i++) {
                 System.out.print(result[i]);
@@ -21,12 +20,8 @@ public class Permutation1 {
         }
 
         for (int i = 0; i < arr.length; i++) {
-            if (!visited[i]) {
-                visited[i] = true;
                 result[depth] = arr[i];
-                permutation(arr, visited, result, depth+1, r);
-                visited[i] = false;
-            }
+                permutation(arr, result, depth+1, r);
         }
     }
 }
