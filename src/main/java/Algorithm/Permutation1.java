@@ -1,12 +1,15 @@
 package Algorithm;
 
+import java.util.Arrays;
+
 public class Permutation1 {
     public static void main (String[] args) {
-        int[] arr = {1, 2, 3};
+        int[] arr = {1, 2};
         boolean[] visited = new boolean[arr.length];
-        int[] result = new int[arr.length];
+        int r = 2;
+        int[] result = new int[r];
 
-        permutation(arr, visited, result, 0, 2);
+        permutation(arr, visited, result, 0, r);
     }
 
     public static void permutation(int[] arr, boolean[] visited, int[] result, int depth, int r) {
