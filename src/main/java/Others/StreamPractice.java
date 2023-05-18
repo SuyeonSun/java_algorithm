@@ -10,6 +10,7 @@ import java.util.stream.Stream;
 
 public class StreamPractice {
     public static void main(String[] args) {
+        // =============== 예제1 ===============
         List<String> list = Arrays.asList("이름1", "이름2", "이름3");
 
         // Stream: 물고기의 이동
@@ -19,7 +20,10 @@ public class StreamPractice {
         // map: 물고기 상자에 담기
         // collect: 상자 운반 // 데이터의 변형 등의 처리를 하고 자료형으로 변환
 
-        
-
+        // =============== 예제2 ===============
+        String[] arr1 = {"a", "b", "c"};
+        Stream<String> stream1 = Arrays.stream(arr1);
+        Stream<String> stream1OfArrayPart =
+                Arrays.stream(arr1, 1, 3); // 1~2 요소 [b, c]
     }
 }
