@@ -1,4 +1,5 @@
 package Others;
+import java.util.*;
 
 public class EqualsPractice {
     public static void main (String[] args) {
@@ -13,5 +14,9 @@ public class EqualsPractice {
         System.out.println(str1 == str2); // false
         System.out.println(str1.equals(str2)); // true
 
+        // ERROR: equals는 객체 비교 시에만 사용 가능
+        // char is primitive, character is object
+        System.out.println(str.charAt(0) == 'j');
+        // System.out.println(str.charAt(0).equals('j'));
     }
 }
