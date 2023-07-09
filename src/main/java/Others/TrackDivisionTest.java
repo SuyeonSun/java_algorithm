@@ -7,6 +7,12 @@ public class TrackDivisionTest {
         }
     }
 
+    static int num = 100;
+
+    public static void cal() {
+        num *= 2;
+    }
+
     public static void main (String[] args) {
         // 1
         int k = 10;
@@ -28,5 +34,9 @@ public class TrackDivisionTest {
 
         // 4
         // 클래스에서 클래스 호출하기
+
+        // 5
+        cal();
+        System.out.println("num " + num);
     }
 }
