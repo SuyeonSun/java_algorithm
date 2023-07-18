@@ -1,4 +1,4 @@
-package Others;
+package BaekJoon;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Main {
+public class N1012 {
     static boolean[][] check; // 배추 유무 확인
     static int n; // 배추밭 가로
     static int m; // 배추밭 세로
