@@ -63,7 +63,6 @@ public class N1012 {
                 int x = Integer.parseInt(pos.split(" ")[0]);
                 int y = Integer.parseInt(pos.split(" ")[1]);
                 farm[x][y] = 1;
-                System.out.println(x + " " + y);
             }
 
             int count = 0; // 지렁이 개수
