@@ -1,4 +1,4 @@
-package Others.ClassTest;
+package Others.classTest;
 
 public class DiselSuv extends Vehicle {
     @Override

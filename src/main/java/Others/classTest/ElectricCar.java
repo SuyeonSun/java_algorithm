@@ -1,4 +1,4 @@
-package Others.ClassTest;
+package Others.classTest;
 
 public class ElectricCar extends Vehicle {
     @Override

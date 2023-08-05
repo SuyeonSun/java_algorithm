@@ -1,4 +1,4 @@
-package Others.ClassTest;
+package Others.classTest;
 
 abstract public class Vehicle {
     private int curX, curY;
