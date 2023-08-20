@@ -1,24 +1,11 @@
 package Algorithm;
 
-/*
-{1, 2, 3}
-1, 1
-1, 2
-1, 3
-2, 1
-2, 2
-2, 3
-3, 1
-3, 2
-3, 3
-*/
-
-public class Permutation2 {
+public class Combination2 {
     static int[] arr = new int[]{1, 2, 3};
     static int r = 2;
     static int[] numbers = new int[r];
 
-    public static void permutation (int cnt) {
+    public static void combination (int cnt, int start) {
         if (cnt == r) {
             for (int i = 0; i < numbers.length; i++) {
                 System.out.print(numbers[i]);
@@ -27,14 +14,13 @@ public class Permutation2 {
             return;
         }
 
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = start; i < arr.length; i++) {
             numbers[cnt] = arr[i];
-            permutation(cnt+1);
+            combination(cnt+1, i);
         }
-
     }
 
     public static void main (String[] args) {
-        permutation(0);
+        combination(0, 0);
     }
 }

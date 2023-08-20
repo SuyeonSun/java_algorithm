@@ -1,32 +1,41 @@
 package Algorithm;
 
-// 순열
+/*
+{ 1, 2, 3 }
+1 2
+1 3
+2 1
+2 3
+3 1
+3 3
+*/
+
 public class Permutation1 {
-    public static void main (String[] args) {
-        int[] arr = {1, 2};
-        boolean[] visited = new boolean[arr.length];
-        int r = 2;
-        int[] result = new int[r];
+    static int[] arr = new int[] {1, 2, 3};
+    static boolean[] isSelected = new boolean[arr.length];
+    static int r = 3;
+    static int[] numbers = new int[r];
 
-        permutation(arr, visited, result, 0, r);
-    }
-
-    public static void permutation(int[] arr, boolean[] visited, int[] result, int depth, int r) {
-        if (depth == r) {
-            for (int i = 0; i < r; i++) {
-                System.out.print(result[i]);
+    public static void permutation (int cnt) {
+        if (cnt == r) {
+            for (int i = 0; i < numbers.length; i++) {
+                System.out.print(numbers[i]);
             }
             System.out.println();
             return;
         }
 
         for (int i = 0; i < arr.length; i++) {
-            if (!visited[i]) {
-                visited[i] = true;
-                result[depth] = arr[i];
-                permutation(arr, visited, result, depth+1, r);
-                visited[i] = false;
+            if (!isSelected[i]) {
+                isSelected[i] = true;
+                numbers[cnt] = arr[i];
+                permutation(cnt + 1);
+                isSelected[i] = false;
             }
         }
+    }
+
+    public static void main (String[] args) {
+        permutation(0);
     }
 }
